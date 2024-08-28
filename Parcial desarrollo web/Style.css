@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(214, 17%, 51%);
+  padding: 20px;
+}
+
+.article-preview {
+  display: flex; 
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.article-image {
+  width: 50%;
+  height: auto;
+}
+
+.article-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.article-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: hsl(214, 17%, 51%);
+}
+
+.author-share-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  margin-right: 10px;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+.share-container {
+  position: relative;
+}
+
+#share-btn {
+  background-color: hsl(214, 17%, 51%);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#share-btn:hover {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.share-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#share-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.share-option img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.share-option img:hover {
+  transform: scale(1.1);
+}
+
+.share-container.active #share-options {
+  display: flex; 
+}
+
+@media (max-width: 375px) {
+  .article-preview {
+    flex-direction: column; 
+  }
+
+  .article-image, .article-content {
+    width: 100%;
+  }
+}
